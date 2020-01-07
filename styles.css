@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* CSS Document */ :root {
+  --color5: #31434c;
+  --color4: #5e626b;
+  --color3: #958892;
+  --color2: #baaeb5;
+  --color1: #dedbdd;
+  --headerheight: 6.5rem;
+}
+:target {
+  display: block;
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--headerheight);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+	background-color: var(--color1);
+   margin: 0;
+  color: var(--color4);
+  font-family: "Unica One";
+  font-size: 120%; /* the base font-size */
+  height: 100%;
+  letter-spacing: 0.1rem;
+}
+a {
+  color: var(--color4);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color2);
+}
+@keyframes slideInFromLeft {
+  0% {
+    letter-spacing: 2rem;
+  }
+  100% {
+    letter-spacing: 0.5rem;
+  }
+}
+
+
+/* nav bar
+  --------------------------------------------- */
+.nav a {
+  display: inline;
+  padding: 0 5px;
+  margin: 0px;
+  transition: 0.2s;
+}
+.nav a:hover {
+  background-color: var(--color4);
+}
+.active {
+  background-color: var(--color2);
+}
+
+.contact {
+  border: 1px solid var(--color4);
+}
+.nav2 {
+  display: block;
+  float: right;
+  padding: 5px;
+  margin: 0px;
+  color: var(--color3);
+  font-size: 75%;
+}
+.nav2 a {
+  display: inline;
+  padding: 0 5px;
+  margin: 0px;
+  transition: 0.2s;
+}
+.nav2 a:hover {
+  background-color: var(--color3);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+.content {
+  display: block;
+  flex-direction: column;
+  will-change: transform;
+}
+.logo:hover {
+  color: var(--color2);
+  transition: 0.2s;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: calc(var(--headerheight));
+  min-width: 100%;
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0px; /* ➜ the trick */
+  text-align: center;
+  background-color: var(--color1);
+  vertical-align: middle;
+  align-items: center;
+		  letter-spacing: 0.1rem;
+}
+.section--header-spacer1 {
+  display: block;
+  padding: 0px;
+  min-width: 100%;
+  min-height: 25vh;
+  background-color: var(--color1);
+}
+.section--header-spacer2 {
+  display: block;
+  padding: 0px;
+  min-width: 100%;
+  min-height: 25vh;
+  background-color: var(--color1);
+}
+.logo a {
+  font-size: 300%;
+  transition: 0.2s;
+  padding: 0 15px;
+  animation: 1s slideInFromLeft 1;
+	  letter-spacing: 0.5rem;
+	text-shadow: 0px 0px 0px var(--color5);
+}
+.section--1 {
+  display: block;
+  min-height: 50%;
+  min-width: 100%;
+  background-color: var(--color2);
+  font-size: 300%;
+  color: var(--color1);
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: calc(var(--headerheight) + 0rem); /* ➜ the trick */
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+.section--2 {
+  background-color: var(--color3);
+  font-size: 300%;
+  color: var(--color2);
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: calc(var(--headerheight) + 2rem); /* ➜ the trick */
+  margin-bottom: 2rem;
+  padding-bottom: 20px;
+  display: block;
+	
+}
+.section--3 {
+  background-color: var(--color4);
+  font-size: 300%;
+  color: var(--color3);
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: calc(var(--headerheight) + 4rem); /* ➜ the trick */
+  margin-bottom: 4rem;
+  padding-bottom: 20px;
+  display: block;
+	
+}
+.section--4 {
+  min-height: calc(100vh - 15.5rem);
+  background-color: var(--color5);
+  font-size: 300%;
+  color: var(--color4);
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: calc(var(--headerheight) + 6rem); /* ➜ the trick */
+  margin-bottom: 0rem;
+  padding-bottom: 20px;
+	
+}
+footer {
+  display: block;
+  height: 2rem;
+  min-width: 100%;
+  background-color: var(--color5);
+  color: var(--color2);
+  position: relative;
+  text-align: center;
+  font-size: 75%;
+}
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling-wrapper-flexbox::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  border: 0px solid red;
+  margin: 0 10px;
+  min-width: 560px;
+  height: 60vh;
+  background-color: rgba(0,0,0,0.1);
+	font-size:25%;
+	letter-spacing: 0.05em;
+	font-family: helvetica, arial, sans-serif;
+	color: var(--color5);
+	padding: 20px;
+	text-align: center;
+}
+.section-title {
+  color: inherit;
+  background-color: inherit;
+}
+.section-title:hover {
+  color: inherit;
+  text-indent: 0px;
+  transition: 0.2s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
