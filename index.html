@@ -1,178 +1,287 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lloyd Russell</title>
-	<link rel="stylesheet" href="styles.css?rnd=132">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Unica+One">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="icon" href="myfavicon.png" type="image/png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lloyd Russell</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Unica+One">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="icon" href="myfavicon.png" type="image/png" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <body>
-	<a id ="top" ></a>
-	<div class="section--header-spacer1">
-		<ul class="nav2">
-			Choose a LUT:
-			<li><a href="javascript:clickGrey();">grey</a></li>
-			<li><a href="javascript:clickViridis();">viridis</a></li>
-			<li><a href="javascript:clickHSV();">hsv</a></li>
-		</ul>
-	</div>
-	<header id="header">
-		<div id="logo" class="logo"> <a href="#top" class="" id="logo2"> LLOYD RUSSELL </a> </div>
-		<nav class="nav">
-			<ul>
-				<li><a href="#section1">SCIENCE</a></li>
-				<li><a href="#section2">DATA</a></li>
-				<li><a href="#section3">DESIGN</a></li>
-				<li><a href="#section4" class="contact">CONTACT</a></li>
-				<li><a href="#section5">CV</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="section--header-spacer2"> </div>
-	<main>
-		<a id ="section1" ></a>
-		<section class="section--1 " id="science-section"> <a href="#section1" class="section-title">
-			<div class="section-title" id="science-title"> SCIENCE </div>
-		</a>
-		<div class="scrolling-wrapper-flexbox">
-			<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-			<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-			<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-			<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		</div>
-	</section>
-	<a id ="section2" ></a>
-	<section  class="section--2 " id="data-section"> <a href="#section2" class="section-title">
-		<div class="section-title" id="data-title"> DATA </div>
-	</a>
-	<div class="scrolling-wrapper-flexbox">
-		<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 
-	</div>
+  <a id ="top" ></a>
+  <ul class="nav2">
+      CHOOSE A LUT:
+      <li><a href="javascript:clickGrey();">GREY</a></li>
+      <li><a href="javascript:clickViridis();">VIRIDIS</a></li>
+      <li><a href="javascript:clickHSV();">HSV</a></li>
+    </ul>
+  <div class="section--header-spacer1">
+  </div>
+  <header id="header">
+    <div  class="anim" id="logo"> <a href="#top" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="0 -5 500 75" xml:space="preserve" enable-background="new 0 0 500 300">
+        <g>
+          <path class="st0" d="M9.72 10.92c0 14.52 0 29.04 0 43.56 0 2.34 0.59 2.97 2.88 3.12 3.88 0.26 7.76 0.05 11.64 0.12"/>
+          <path class="st0" d="M43.75 10.92c0 14.52 0 29.04 0 43.56 0 2.34 0.59 2.97 2.88 3.12 3.88 0.26 7.76 0.05 11.64 0.12"/>
+          <path class="st0" d="M88.32 11.14c-1.36 0.24-2.74 0.4-4.08 0.74 -3.76 0.95-6.13 3.35-6.13 7.78 0.01 10.12 0.1 20.24-0.03 30.36 -0.07 5.79 2.64 8.3 8.08 9.1 2.38 0.35 4.74 0.1 7.08-0.56 3.91-1.1 5.72-3.57 5.74-7.46 0.05-10.56 0.09-21.12-0.02-31.68 -0.05-4.66-2.73-7-7.17-7.8 -1.12-0.2-2.29-0.11-3.36-0.6"/>
+          <path class="st0" d="M118.92 12.24c1.48 4 2.94 8.01 4.45 12 1.37 3.61 2.82 7.19 4.18 10.81 0.51 1.35 1.25 2.52 2.43 3.33 0.5 0.34 0.34 0.73 0.33 1.1 -0.21 6.48-0.06 12.96-0.11 19.44"/>
+          <path class="st0" d="M142.2 12.24c-2.84 7.08-5.67 14.16-8.53 21.24 -0.38 0.93-0.66 1.89-1.17 2.78 -0.55 0.95-1.22 1.73-2.18 2.27"/>
+          <path class="st0" d="M167.16 12.12c-1.98 0.12-2.88 1.04-2.88 3 0 13.12-0.01 26.24 0.01 39.36 0 1.96 0.43 2.75 2.62 3.03 3.62 0.48 7.24 0.56 10.8-0.2 3.49-0.74 5.42-3.47 5.88-6.92 0.11-0.83 0.12-1.68 0.13-2.52 0.01-9 0.06-18-0.02-27 -0.04-4.33-2.01-6.89-5.74-8.14 -1.06-0.36-2.21-0.5-3.35-0.51 -2.44-0.02-4.88 0.1-7.32-0.12"/>
+          <path class="st0" d="M252.72 57.96c-1.88-3.52-3.86-6.99-5.6-10.58 -0.98-2.02-2.35-3.9-2.69-6.22 -0.05-0.38-0.35-0.6-0.71-0.72 -0.66-0.22-1.33-0.37-2.04-0.36 -2.72 0.02-5.44 0.01-8.16 0.01l10.8 0.6c0.88-0.82 1.96-1.36 3.01-1.9 2.74-1.4 3.84-3.66 3.83-6.62 -0.01-3.88-0.02-7.76 0-11.64 0.03-5.05-2.74-7.53-7.33-8.14 -2.9-0.38-5.84-0.13-8.76-0.12 -1.51 0-2.38 1.07-2.39 2.74 -0.02 3-0.01 6-0.01 9 0 4.36 0.04 8.72-0.03 13.08 -0.02 1.16 0.79 2.19 0.56 3.23 -0.23 1.04-0.54 2.04-0.54 3.14 0.02 5.16 0.01 10.32 0.01 15.48"/>
+          <path class="st0" d="M273.48 10.92c0 13.2-0.01 26.4 0.01 39.6 0 3.22 1.18 5.83 4.2 7.3 1.3 0.63 2.77 0.82 4.19 1.11 2.4 0.5 4.72 0.13 6.95-0.64 3.43-1.19 5.52-3.58 5.53-7.77 0.01-13.2 0-26.4 0-39.6"/>
+          <path class="st0" d="M336.6 25.08c0.12-2.33-0.09-4.65-0.26-6.96 -0.31-4.1-2.13-5.64-5.5-6.57 -3.07-0.85-6.18-0.8-9.23 0.32 -3.04 1.12-4.88 3.71-4.93 6.97 -0.04 2.78 0.04 5.57 1.96 7.78 1.87 2.15 3.92 4.16 5.98 6.13 3.58 3.42 7.22 6.78 10.53 10.47 2.38 2.65 2.64 5.9 1.92 9.22 -0.9 4.13-2.91 5.63-7.17 6.3 -2.87 0.45-5.59 0.27-8.29-0.66 -3.07-1.06-4.99-3.63-4.93-7.07 0.03-2 0.01-4 0.01-6"/>
+          <path class="st0" d="M377.2 25.08c0.12-2.33-0.09-4.65-0.26-6.96 -0.31-4.1-2.13-5.64-5.5-6.57 -3.07-0.85-6.18-0.8-9.23 0.32 -3.04 1.12-4.88 3.71-4.93 6.97 -0.04 2.78 0.04 5.57 1.96 7.78 1.87 2.15 3.92 4.16 5.98 6.13 3.58 3.42 7.22 6.78 10.53 10.47 2.38 2.65 2.64 5.9 1.92 9.22 -0.9 4.13-2.91 5.63-7.17 6.3 -2.87 0.45-5.59 0.27-8.29-0.66 -3.07-1.06-4.99-3.63-4.93-7.07 0.03-2 0.01-4 0.01-6"/>
+          <path class="st0" d="M419.76 12.12c-4.28-0.25-8.56-0.07-12.84-0.11 -0.68-0.01-1.36 0.04-2.04 0.12 -1.3 0.16-2.27 1.25-2.27 2.63 -0.02 5.8-0.01 11.6-0.01 17.4 0 0.87 0.63 1.65 0.63 2.4s-0.63 1.53-0.63 2.4c0 6.08-0.01 12.16 0.01 18.24 0.01 1.46 0.93 2.3 2.39 2.41 4.6 0.35 9.2 0.21 13.8 0.23 0.64 0 1.28-0.07 1.92-0.11"/>
+          <path class="st0" d="M403.44 34.56c4.4 0.06 8.8-0.14 13.2 0.12"/>
+          <path class="st0" d="M442.81 10.92c0 14.52 0 29.04 0 43.56 0 2.34 0.59 2.97 2.88 3.12 3.88 0.26 7.76 0.05 11.64 0.12"/>
+          <path class="st0" d="M476.84 10.92c0 14.52 0 29.04 0 43.56 0 2.34 0.59 2.97 2.88 3.12 3.88 0.26 7.76 0.05 11.64 0.12"/>
+        </g>
+      </svg>
+
+    </a>
+  </div>
+  <!-- <div id="logo" class="logo"> <a href="#top" class="ml11" id="logo2"><span class="letters"> LLOYD RUSSELL </span> </a> </div> -->
+  <nav class="nav">
+    <ul>
+      <li><a href="#section1">SCIENCE</a></li>
+      <li><a href="#section2">DATA</a></li>
+      <li><a href="#section3">DESIGN</a></li>
+      <li><a href="#section4" class="contact">CONTACT</a></li>
+      <li><a href="#section5">CV</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="section--header-spacer2"> </div>
+
+  <a id ="section1"  class="anchor-1"></a>
+  <section class="section section-1 " id="science-section"> <a href="#section1">
+    <div class="section-title title-1" id="science-title"> SCIENCE </div>
+  </a>
+  <div class="scrolling-wrapper-flexbox">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+  </div>
 </section>
-<a id ="section3" ></a>
-<section class="section--3 " id="design-section"> <a href="#section3" class="section-title">
-	<div class="section-title" id="design-title"> DESIGN </div>
+<a id ="section2" class="anchor-2"></a>
+<section  class="section section-2 " id="data-section"> <a href="#section2" >
+  <div class="section-title title-2" id="data-title"> DATA </div>
 </a>
 <div class="scrolling-wrapper-flexbox">
-	<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-	<div class="card"><h3>Title</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+  <div class="card">1</div>
+  <div class="card">2</div>
+  <div class="card">3</div>
+
 </div>
 </section>
-<a id ="section4"></a>
-<section class="section--4 " id="contact-section"> <a href="#section4" class="section-title">
-	<div class="section-title" id="contact-title"> CONTACT </div>
-</a> </section>
-</main>
+<a id ="section3"  class="anchor-3"></a>
+<section class="section section-3 " id="design-section"> <a href="#section3">
+  <div class="section-title title-3" id="design-title"> DESIGN </div>
+</a>
+<div class="scrolling-wrapper-flexbox">
+
+  <div class="card">1</div>
+  <div class="card">2</div>
+</div>
+</section>
+<a id ="section4"  class="anchor-4"></a>
+<section class="section section-4 " id="contact-section"> <a href="#section4">
+  <div class="section-title title-4" id="contact-title"> CONTACT </div>
+</a>
+<div class="scrolling-wrapper-flexbox">
+  <div class="card">1</div>
+</div>
+</section>
+
 <footer> MADE BY ME :-)</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script> 
 <script>
 
 
-	function clickGrey() {
-		cols = chroma.scale(['#111111','#cccccc']).domain([1,0]).mode('lch').colors(5)
-		document.documentElement.style.setProperty('--color1', cols[0]);
-		document.documentElement.style.setProperty('--color2', cols[1]);   document.documentElement.style.setProperty('--color3', cols[2]);   document.documentElement.style.setProperty('--color4', cols[3]);   document.documentElement.style.setProperty('--color5', cols[4]);
-	}	
-	function clickViridis() {
-		cols = chroma.scale(['#fafa6e','#581c85']).domain([1,0]).mode('lch').colors(5)
-		document.documentElement.style.setProperty('--color1', cols[0]);
-		document.documentElement.style.setProperty('--color2', cols[1]);   document.documentElement.style.setProperty('--color3', cols[2]);   document.documentElement.style.setProperty('--color4', cols[3]);   document.documentElement.style.setProperty('--color5', cols[4]);
-	}	
-	function clickHSV() {
-		cols = chroma.scale('spectral').mode('lch').colors(5)
-		document.documentElement.style.setProperty('--color1', cols[0]);
-		document.documentElement.style.setProperty('--color2', cols[1]);   document.documentElement.style.setProperty('--color3', cols[2]);   document.documentElement.style.setProperty('--color4', cols[3]);   document.documentElement.style.setProperty('--color5', cols[4]);
-	}	
+  function clickGrey() {
+    cols = chroma.scale(['#111111','#cccccc']).colors(5)
+    document.documentElement.style.setProperty('--color1', cols[0]);
+    document.documentElement.style.setProperty('--color2', cols[1]);
+    document.documentElement.style.setProperty('--color3', cols[2]);
+    document.documentElement.style.setProperty('--color4', cols[3]);
+    document.documentElement.style.setProperty('--color5', cols[4]);
+  } 
+  function clickViridis() {
+    cols = chroma.scale(['#fafa6e','#581c85']).mode('lch').colors(5)
+    document.documentElement.style.setProperty('--color1', cols[0]);
+    document.documentElement.style.setProperty('--color2', cols[1]);   
+    document.documentElement.style.setProperty('--color3', cols[2]);   
+    document.documentElement.style.setProperty('--color4', cols[3]);   
+    document.documentElement.style.setProperty('--color5', cols[4]);
+  } 
+  function clickHSV() {
+    cols = chroma.scale('spectral').mode('lch').colors(5)
+    document.documentElement.style.setProperty('--color1', cols[0]);
+    document.documentElement.style.setProperty('--color2', cols[1]);   
+    document.documentElement.style.setProperty('--color3', cols[2]);   
+    document.documentElement.style.setProperty('--color4', cols[3]);   
+    document.documentElement.style.setProperty('--color5', cols[4]);
+  } 
 </script> 
 <script>
-	window.onscroll = throttle(function() {myFunction()}, 17);
+  window.onscroll = throttle(function() {myFunction()}, 17);
 
-	function throttle(fn, threshhold, scope) {
-		threshhold || (threshhold = 250);
-		var last,
-		deferTimer;
-		return function () {
-			var context = scope || this;
+  function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 250);
+    var last,
+    deferTimer;
+    return function () {
+      var context = scope || this;
 
-			var now = +new Date,
-			args = arguments;
-			if (last && now < last + threshhold) {
+      var now = +new Date,
+      args = arguments;
+      if (last && now < last + threshhold) {
 // hold on to it
 clearTimeout(deferTimer);
 deferTimer = setTimeout(function () {
-	last = now;
-	fn.apply(context, args);
+  last = now;
+  fn.apply(context, args);
 }, threshhold);
 } else {
-	last = now;
-	fn.apply(context, args);
+  last = now;
+  fn.apply(context, args);
 }
 };
 }
 
 function myFunction() {
-	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-	var scrolled = (winScroll / height);
-	var maxBlur = 7;
-	var blurAmount = scrolled * maxBlur;
-	document.getElementById("logo2").style.filter = "blur(" + blurAmount + "px)";
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height);
+  var maxBlur = 7;
+  var blurAmount = scrolled * maxBlur;
+  var colourTitle = false;
+  if (colourTitle) {
+   var col1 = getComputedStyle(document.documentElement,null).getPropertyValue('--color1').trim();
+   var col2 = getComputedStyle(document.documentElement,null).getPropertyValue('--color2').trim();	
+   var col3 = getComputedStyle(document.documentElement,null).getPropertyValue('--color3').trim();
+   var col4 = getComputedStyle(document.documentElement,null).getPropertyValue('--color4').trim();	
+   var col5 = getComputedStyle(document.documentElement,null).getPropertyValue('--color5').trim();
+   cols = chroma.scale([col5, col4, col3, col2, col5]).mode('lch').colors(100)
+   document.getElementById("logo2").style.color = cols[Math.round(scrolled*100)];
+ }
 
-	var blurSections = false;
-	if (blurSections) {
-	if (scrolled > 0.2){
-		var blurAmount = (scrolled - 0.2) * maxBlur;
-		document.getElementById("science-section").style.filter = "blur(" + blurAmount + "px)";
-	}
-	else{
-		document.getElementById("science-section").style.filter = "blur(" + 0 + "px)";
-	}
+ if (scrolled > 0.1){
+  var blurTitle = false;
+  if (blurTitle) {
+    var blurAmount = (scrolled - 0.1) * maxBlur;
+    document.getElementById("logo2").style.filter = "blur(" + blurAmount + "px)";
+  }
+}
+else{
+  document.getElementById("logo2").style.filter = "blur(" + 0 + "px)";
+}
+var blurSections = false;
+if (blurSections) {
+  if (scrolled > 0.2){
+    var blurAmount = (scrolled - 0.2) * maxBlur;
+    document.getElementById("science-section").style.filter = "blur(" + blurAmount + "px)";
+  }
+  else{
+    document.getElementById("science-section").style.filter = "blur(" + 0 + "px)";
+  }
 
-	if (scrolled > 0.45){
-		var blurAmount = (scrolled - 0.45) * maxBlur;
-		document.getElementById("data-section").style.filter = "blur(" + blurAmount + "px)";
-	}
-	else{
-		document.getElementById("data-section").style.filter = "blur(" + 0 + "px)";
-	}
+  if (scrolled > 0.45){
+    var blurAmount = (scrolled - 0.45) * maxBlur;
+    document.getElementById("data-section").style.filter = "blur(" + blurAmount + "px)";
+  }
+  else{
+    document.getElementById("data-section").style.filter = "blur(" + 0 + "px)";
+  }
 
-	if (scrolled > 0.7){
-		var blurAmount = (scrolled - 0.7) * maxBlur;
-		document.getElementById("design-section").style.filter = "blur(" + blurAmount + "px)";
-	}
-	else{
-		document.getElementById("design-section").style.filter = "blur(" + 0 + "px)";
-	}
-	}
+  if (scrolled > 0.7){
+    var blurAmount = (scrolled - 0.7) * maxBlur;
+    document.getElementById("design-section").style.filter = "blur(" + blurAmount + "px)";
+  }
+  else{
+    document.getElementById("design-section").style.filter = "blur(" + 0 + "px)";
+  }
+}
 }
 </script>
 
 <script>
-	$(window).on("scroll", function() {
-		var currentPos = $(window).scrollTop();
+  $(window).on("scroll", function() {
+    var currentPos = $(window).scrollTop();
 
-		$('.nav li a').each(function() {
-			var sectionLink = $(this);
-// capture the height of the navbar
-var navHeight = $('#header').outerHeight() ;
-var section = $(sectionLink.attr('href'));
+    $('.nav li a').each(function() {
+      var sectionLink = $(this);
+    // capture the height of the navbar
+    var navHeight = $('#header').outerHeight() ;
+    var section = $(sectionLink.attr('href'));
 
-// subtract the navbar height from the top of the section
-if(section.position().top - navHeight  <= currentPos+200 && sectionLink.offset().top + section.height()> currentPos-200) {
-	$('.nav li').removeClass('active');
-	sectionLink.parent().addClass('active');
-} else {
-	sectionLink.parent().removeClass('active');
-}
-});        
-	});
+    if (section.length)     {
+      // subtract the navbar height from the top of the section
+      if(section.position().top - navHeight  <= currentPos+200 && sectionLink.offset().top + section.height()> currentPos-200) {
+        $('.nav li').removeClass('active');
+        sectionLink.parent().addClass('active');
+      } else {
+        sectionLink.parent().removeClass('active');
+      }
+    }
+  });        
+  });
+</script>
+
+<script>
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector('.ml11 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: false})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 300,
+    delay: 50
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 50 * (i+1)
+  });
+</script>
+
+<script type="text/javascript">
+  var pathEls = document.querySelectorAll('path');
+  for (var i = 0; i < pathEls.length; i++) {
+    var pathEl = pathEls[i];
+    var offset = anime.setDashoffset(pathEl);
+    pathEl.setAttribute('stroke-dashoffset', offset);
+    anime({
+      targets: pathEl,
+      strokeDashoffset: [offset, 0],
+      duration: 500,
+      loop: false,
+      easing: 'easeInOutSine',
+      delay: i*100,
+      autoplay: true,
+      opacity: [0, 1]
+    });
+  }
 </script>
 </body>
 </html>

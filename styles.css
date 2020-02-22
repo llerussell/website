@@ -1,19 +1,23 @@
 @charset "UTF-8";
-/* CSS Document */ :root {
-  --color5: #31434c;
-  --color4: #5e626b;
+/* CSS Document */
+:root {
+  --color1: #31434c;
+  --color2: #5e626b;
   --color3: #958892;
-  --color2: #baaeb5;
-  --color1: #dedbdd;
-  --headerheight: 6.5rem;
+  --color4: #baaeb5;
+  --color5: #dedbdd;
+  --headerheight: 4rem;
+  --headingoverlap: 0.5rem;
 }
+
+
 :target {
   display: block;
   position: relative;
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--headerheight);
+  scroll-padding-top: 0px;
 }
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -21,13 +25,21 @@ html {
   }
 }
 body {
-	background-color: var(--color1);
-   margin: 0;
+  background-color: var(--color1);
+  margin: 0;
   color: var(--color4);
   font-family: "Unica One";
-  font-size: 120%; /* the base font-size */
+  font-size: 12px; /* the base font-size */
   height: 100%;
   letter-spacing: 0.1rem;
+
+}
+@media(min-width:800px){
+	:root{
+		--headerheight: 5.4rem;
+		--headingoverlap: 1.8rem;
+	}
+	body{font-size: 16px;}
 }
 a {
   color: var(--color4);
@@ -36,18 +48,84 @@ a {
 a:hover {
   color: var(--color2);
 }
-@keyframes slideInFromLeft {
+
+@keyframes fadeInSection {
   0% {
-    letter-spacing: 2rem;
+    opacity: 1;
+    transform: translateY(100%);
   }
   100% {
-    letter-spacing: 0.5rem;
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 
 
+@keyframes fadeInLogo {
+  0% {
+    letter-spacing: 0.6rem;
+    filter: blur(10px);
+  }
+  100% {
+    letter-spacing: 0.3rem;
+
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeInMenu {
+ 0% {
+  opacity: 0;
+  filter: blur(10px);
+}
+50% {
+ opacity: 0;
+ filter: blur(0px);
+ transform: translateY(-100%);;
+ overflow: hidden;
+}
+100% {
+  opacity: 1;
+  filter: blur(0px)
+  transform: translateY(0%);
+}
+}
+@keyframes fadeInLUTMenu {
+ 0% {
+  opacity: 0;
+  filter: blur(10px);
+}
+66% {
+ opacity: 0;
+ transform: translateY(-100%);;
+ overflow: hidden;
+}
+100% {
+  opacity: 1;
+  transform: translateY(0%);
+}
+}
+
+html{
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 0px;
+}
+
+.section, .section--header-spacer1{
+  display: flex;
+  scroll-snap-align: start; /* latest (Chrome 69+) */  
+  scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */  
+  -webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */  
+
+  scroll-padding: 0px;
+
+}
 /* nav bar
-  --------------------------------------------- */
+--------------------------------------------- */
+.nav {
+  animation: 2s fadeInMenu 1; */ 
+}
 .nav a {
   display: inline;
   padding: 0 5px;
@@ -60,26 +138,33 @@ a:hover {
 .active {
   background-color: var(--color2);
 }
-
 .contact {
   border: 1px solid var(--color4);
 }
 .nav2 {
   display: block;
   float: right;
-  padding: 5px;
+  position: absolute;
+  top: 0;
+  right:0;
+  padding: 5px 10px;
   margin: 0px;
   color: var(--color3);
   font-size: 75%;
+  background-color: var(--color2);
 }
 .nav2 a {
   display: inline;
   padding: 0 5px;
   margin: 0px;
   transition: 0.2s;
+   color: var(--color4);
 }
 .nav2 a:hover {
-  background-color: var(--color3);
+  background-color: var(--color1);
+}
+.nav2 {
+  animation: 3s fadeInLUTMenu 1; */ 
 }
 ul {
   list-style-type: none;
@@ -94,8 +179,8 @@ li {
   flex-direction: column;
   will-change: transform;
 }
-.logo:hover {
-  color: var(--color2);
+.logo a:hover {
+  stroke: var(--color2);
   transition: 0.2s;
 }
 header {
@@ -111,7 +196,8 @@ header {
   background-color: var(--color1);
   vertical-align: middle;
   align-items: center;
-		  letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+
 }
 .section--header-spacer1 {
   display: block;
@@ -131,98 +217,174 @@ header {
   font-size: 300%;
   transition: 0.2s;
   padding: 0 15px;
-  animation: 1s slideInFromLeft 1;
-	  letter-spacing: 0.5rem;
-	text-shadow: 0px 0px 0px var(--color5);
+  /* animation: 2s fadeInLogo 1;
+  -webkit-animation: 2s fadeInLogo 1;
+  -moz-animation: 2s fadeInLogo 1;
+  -o-animation: 2s fadeInLogo 1; */ 
+  letter-spacing: 0.3rem;
 }
-.section--1 {
+.section {
   display: block;
-  min-height: 50%;
   min-width: 100%;
-  background-color: var(--color2);
   font-size: 300%;
-  color: var(--color1);
   position: -webkit-sticky; /* for Safari */
   position: sticky;
-  top: calc(var(--headerheight) + 0rem); /* ➜ the trick */
+  padding-bottom: 20px;	
+  scroll-snap-align: start;
+  opacity: 0;
+  animation: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s fadeInSection forwards;
+}
+
+.section-1 {
+  background-color: var(--color2);
+  color: var(--color1);
+  top: calc(var(--headerheight) + calc(var(--headingoverlap) * 0) ); /* ➜ the trick */
+
   margin-bottom: 0px;
-  padding-bottom: 20px;
+  scroll-margin: calc(var(--headerheight) + calc(var(--headingoverlap) * 0));
+  animation-delay: 1s;
+
 }
-.section--2 {
+.section-2 {
   background-color: var(--color3);
-  font-size: 300%;
   color: var(--color2);
-  position: -webkit-sticky; /* Safari & IE */
-  position: sticky;
-  top: calc(var(--headerheight) + 2rem); /* ➜ the trick */
-  margin-bottom: 2rem;
-  padding-bottom: 20px;
-  display: block;
-	
+  top: calc(var(--headerheight) + calc(var(--headingoverlap) * 1) ); /* ➜ the trick */
+  margin-bottom: 0px;
+  scroll-margin: calc(var(--headerheight) + calc(var(--headingoverlap) * 1));
+  animation-delay: 1.25s;
 }
-.section--3 {
+.section-3 {
   background-color: var(--color4);
-  font-size: 300%;
   color: var(--color3);
-  position: -webkit-sticky; /* Safari & IE */
-  position: sticky;
-  top: calc(var(--headerheight) + 4rem); /* ➜ the trick */
-  margin-bottom: 4rem;
-  padding-bottom: 20px;
-  display: block;
-	
+  top: calc(var(--headerheight) + calc(var(--headingoverlap) * 2)); /* ➜ the trick */
+  margin-bottom: 0px;
+  scroll-margin: calc(var(--headerheight) + calc(var(--headingoverlap) * 2));
+  animation-delay: 1.5s;
 }
-.section--4 {
-  min-height: calc(100vh - 15.5rem);
+.section-4 {
+  min-height: calc(calc(calc(100vh - var(--headerheight)) - 70px) - calc(3 * var(--headingoverlap)));
   background-color: var(--color5);
-  font-size: 300%;
   color: var(--color4);
-  position: -webkit-sticky; /* Safari & IE */
-  position: sticky;
-  top: calc(var(--headerheight) + 6rem); /* ➜ the trick */
-  margin-bottom: 0rem;
-  padding-bottom: 20px;
-	
+  top: calc(var(--headerheight) + calc(var(--headingoverlap) * 3)); /* ➜ the trick */
+  margin-bottom: 0px;
+  scroll-margin: calc(var(--headerheight) + calc(var(--headingoverlap) * 3));
+  animation-delay: 1.75s;
 }
 footer {
   display: block;
-  height: 2rem;
+  min-height: 50px;
   min-width: 100%;
   background-color: var(--color5);
   color: var(--color2);
   position: relative;
   text-align: center;
-  font-size: 75%;
+  font-size: 80%;
 }
 .scrolling-wrapper-flexbox {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  display: flex;  
+  align-items: stretch;  
+  width: 100%;  
+  overflow: auto;  
+
+  scroll-snap-type: x mandatory; /* Chrome Canary */  
+  scroll-snap-type: mandatory; /* Firefox */  
+  -ms-scroll-snap-type: mandatory; /* IE/Edge */  
+  -webkit-scroll-snap-type: mandatory; /* Safari */  
+  -webkit-scroll-snap-destination: 0% 0%;  
+  -webkit-overflow-scrolling: touch; /* important for iOS */  
 }
+
 .scrolling-wrapper-flexbox::-webkit-scrollbar {
   display: none;
 }
+
 .card {
-  border: 0px solid red;
-  margin: 0 10px;
-  min-width: 560px;
+  margin-right: 10px;
+  min-width: 66%;
   height: 60vh;
-  background-color: rgba(0,0,0,0.1);
-	font-size:25%;
-	letter-spacing: 0.05em;
-	font-family: helvetica, arial, sans-serif;
-	color: var(--color5);
-	padding: 20px;
-	text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 700%;
+  letter-spacing: 0.05em;
+  font-family: helvetica, arial, sans-serif;
+  color: rgba(255,255,255, 0.1);
+  padding: 10px;
+  text-align: center;
+
+  flex-shrink: 0;  
+
+  scroll-snap-align: start; /* latest (Chrome 69+) */  
+  scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */  
+  -webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */  
+}
+.anchor-1{
+	position: relative;
+	top: calc(var(--headingoverlap) * 0) ;
+}
+.anchor-2 {
+	position: relative;
+	top: calc(var(--headingoverlap) * -1) ;
+}
+.anchor-3 {
+	position: relative;
+	top: calc(var(--headingoverlap) * -2) ;
+}
+.anchor-4 {
+	position: relative;
+	top: calc(var(--headingoverlap) * -3) ;
 }
 .section-title {
-  color: inherit;
-  background-color: inherit;
+	text-indent: 5px;
 }
 .section-title:hover {
-  color: inherit;
-  text-indent: 0px;
   transition: 0.2s;
   background-color: rgba(255, 255, 255, 0.1);
+}
+.title-1{
+	color: var(--color3);
+}
+.title-2{
+	color: var(--color4);
+}
+.title-3{
+	color: var(--color5);
+}
+.title-4{
+	color: var(--color4);
+}
+
+.anim, .anim svg {
+  position: relative;
+  height: 3em;
+}
+.anim g {
+  fill: none;
+  stroke-width: 4;
+  stroke: var(--color4);
+}
+
+.anim g:hover {
+  stroke: var(--color3);
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: var(--color4);
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 20px;
 }
